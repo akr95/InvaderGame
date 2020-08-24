@@ -69,8 +69,8 @@ namespace InVaderGame.Main
             var objectTag = collision.gameObject.GetComponent<TagAssigner>()?.AssignedTag;
             if (objectTag != null && objectTag == TagAssigner.Tag.PlayerBullet)
             {
-                Destroy(this.gameObject);
-                Destroy(collision.gameObject);
+                DestroyImmediate(this.gameObject);
+                DestroyImmediate(collision.gameObject);
             }
 
         }

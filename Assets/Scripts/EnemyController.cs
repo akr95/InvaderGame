@@ -36,14 +36,14 @@ namespace InVaderGame.Main
             CancelInvoke();
             StopAllCoroutines();
             InvokeRepeating("EnemyMovement", 0.1f, _movementSpeed);
-            EnemyInfo.destroedEnemyinfo += BulletHitEnemy;
+            EnemyInfo.destroyedEnemyinfo += BulletHitEnemy;
             UIController.resetGameState += UIController_resetGameState;
 
         }
 
         private void OnDestroy()
         {
-            EnemyInfo.destroedEnemyinfo -= BulletHitEnemy;
+            EnemyInfo.destroyedEnemyinfo -= BulletHitEnemy;
             UIController.resetGameState -= UIController_resetGameState;
         }
 

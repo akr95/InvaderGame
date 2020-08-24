@@ -50,6 +50,8 @@ namespace InVaderGame.Main
                 _playerinfo = SaveOrLoad.Load<Playerinfo>(_storePath);
                 if (_playerinfo == null)
                     _playerinfo = new Playerinfo();
+
+                _playerinfo.levelNumber = 1;
             }
 
             #endregion
@@ -73,7 +75,7 @@ namespace InVaderGame.Main
             }
             if (GridGenerator.Instance.gridInfo.enemyInfos.Count <= 0)
             {
-                _playerinfo.levelNumber++;
+                _playerinfo.levelNumber +=1;
                 GameOver();
             }
 
@@ -170,7 +172,7 @@ namespace InVaderGame.Main
         // GameOver PopUp call
         private void GameOver()
         {
-            _playerinfo.levelNumber = 0;
+            _playerinfo.levelNumber = 1;
             UpdateGameBoard();
         }
 

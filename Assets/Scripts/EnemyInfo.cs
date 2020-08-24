@@ -13,7 +13,7 @@ namespace InVaderGame.Main
         [SerializeField] EnemyType _enemyType;
 
         // public variable
-        public static Action<Vector2> destroedEnemyinfo;
+        public static Action<Vector2> destroyedEnemyinfo;
         public Vector2 EnemyPosition { get; set; }
         public bool IsEnemyAlive { get; set; }
         public bool IsEnemyFire { get; set; }
@@ -30,7 +30,7 @@ namespace InVaderGame.Main
             var objectTag = collision.gameObject.GetComponent<TagAssigner>()?.AssignedTag;
             if (objectTag != null && objectTag == TagAssigner.Tag.PlayerBullet)
             {
-                destroedEnemyinfo?.Invoke(EnemyPosition);
+                destroyedEnemyinfo?.Invoke(EnemyPosition);
                 IsEnemyAlive = false;
 
                 Destroy(this.gameObject);
@@ -38,6 +38,12 @@ namespace InVaderGame.Main
             }
 
         }
+
+        private void OnDestroy()
+        {
+            Destroy(this.gameObject);
+        }
+
     }
 
 
