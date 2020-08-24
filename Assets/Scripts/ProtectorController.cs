@@ -69,6 +69,8 @@ namespace InVaderGame.Main
                 HeathDecrease(_healthStore);
 
                 // Game Over
+               MainCharacter.Instance.gameOver?.Invoke();
+
             }
             else if(assignedTag != null && assignedTag == TagAssigner.Tag.EnemyBullet)
             {

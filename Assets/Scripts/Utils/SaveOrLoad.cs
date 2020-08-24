@@ -40,7 +40,7 @@ namespace InVaderGame.Utils
             {
                 BinaryFormatter formatter = new BinaryFormatter();
                 formatter.Serialize(stream, data);
-
+                stream.Close();
             }
         }
 

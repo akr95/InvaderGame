@@ -26,19 +26,44 @@ namespace InVaderGame.Main
         //Action
         public Action<int> updateScore;
 
+        private float _selfDestroyHeight;
         private int _destroyedEnemyByBullet;
 
         // Start is called before the first frame update
         void Start()
         {
+            _selfDestroyHeight = -Camera.main.orthographicSize;
+            CancelInvoke();
+            StopAllCoroutines();
             InvokeRepeating("EnemyMovement", 0.1f, _movementSpeed);
             EnemyInfo.destroedEnemyinfo += BulletHitEnemy;
+            UIController.resetGameState += UIController_resetGameState;
+
         }
 
         private void OnDestroy()
         {
             EnemyInfo.destroedEnemyinfo -= BulletHitEnemy;
+            UIController.resetGameState -= UIController_resetGameState;
         }
+
+
+        #region Implement delegate
+        /// <summary>
+        /// Implemet reset state delegate, which reset the level manager.
+        /// </summary>
+        /// <param name="isReset"></param>
+        private void UIController_resetGameState(bool isReset)
+        {
+            if (isReset)
+            {
+                
+                Start();
+
+            }
+        }
+
+        #endregion
 
 
         /// <summary>
@@ -59,7 +84,6 @@ namespace InVaderGame.Main
                     return;
                 }
 
-
                 // bullet instiantate
                 var enemyInfos = EnemyInfos();
                 if (enemyInfos.Count > 0 && fireCounter <= fireCountInThisLoop)
@@ -71,9 +95,14 @@ namespace InVaderGame.Main
                         fireCounter++;
                     }
                 }
+                enemyInfos.Clear();
 
+                Debug.Log("enemey pos " +(enemy.position.y < _selfDestroyHeight/1.8f));
+                if (enemy.position.y < _selfDestroyHeight / 1.8f)
+                    MainCharacter.Instance.gameOver?.Invoke();
 
             }
+
         }
 
 
@@ -123,7 +152,6 @@ namespace InVaderGame.Main
                         GridGenerator.Instance.gridInfo.enemyInfos.Add(enemy);
                     }
                 }
-
 
             }
 

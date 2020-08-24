@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B5951065-7B21-14C4-619F-084399F29C2B}</ProjectGuid>
+    <ProjectGuid>{2B06ED10-4DE5-3FB1-1B5F-5767A4BA1BED}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -69,10 +69,12 @@
     <Compile Include="Assets\Scripts\EnemyInfo.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\GridGenerator.cs" />
+    <Compile Include="Assets\Scripts\HomeScreenController.cs" />
     <Compile Include="Assets\Scripts\LevelManager.cs" />
     <Compile Include="Assets\Scripts\MainCharacter.cs" />
     <Compile Include="Assets\Scripts\ProtectorController.cs" />
     <Compile Include="Assets\Scripts\SO-Classes\PlayerProperties.cs" />
+    <Compile Include="Assets\Scripts\Serializables.cs" />
     <Compile Include="Assets\Scripts\UIController.cs" />
     <Compile Include="Assets\Scripts\Utils\Enums.cs" />
     <Compile Include="Assets\Scripts\Utils\FadderController.cs" />
@@ -615,31 +617,31 @@
       <HintPath>/Applications/Unity/Hub/Editor/2019.4.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/mscorlib.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>/Users/akr/Documents/GitHub/Application-Match-Invaders-master/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>/Users/akr/Documents/GitHub/_AKR/InvaderGame/InvaderGame/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>/Users/akr/Documents/GitHub/Application-Match-Invaders-master/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>/Users/akr/Documents/GitHub/_AKR/InvaderGame/InvaderGame/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/akr/Documents/GitHub/Application-Match-Invaders-master/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>/Users/akr/Documents/GitHub/_AKR/InvaderGame/InvaderGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>/Users/akr/Documents/GitHub/Application-Match-Invaders-master/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>/Users/akr/Documents/GitHub/_AKR/InvaderGame/InvaderGame/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>/Users/akr/Documents/GitHub/Application-Match-Invaders-master/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>/Users/akr/Documents/GitHub/_AKR/InvaderGame/InvaderGame/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>/Users/akr/Documents/GitHub/Application-Match-Invaders-master/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>/Users/akr/Documents/GitHub/_AKR/InvaderGame/InvaderGame/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>/Users/akr/Documents/GitHub/Application-Match-Invaders-master/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>/Users/akr/Documents/GitHub/_AKR/InvaderGame/InvaderGame/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/akr/Documents/GitHub/Application-Match-Invaders-master/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>/Users/akr/Documents/GitHub/_AKR/InvaderGame/InvaderGame/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>/Users/akr/Documents/GitHub/Application-Match-Invaders-master/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>/Users/akr/Documents/GitHub/_AKR/InvaderGame/InvaderGame/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>

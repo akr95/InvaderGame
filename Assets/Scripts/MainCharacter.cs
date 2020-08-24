@@ -96,14 +96,16 @@ namespace InVaderGame.Main
         {
             var enemyBullet = collision.gameObject.GetComponent<TagAssigner>()?.AssignedTag;
 
-            if (enemyBullet != null && enemyBullet == TagAssigner.Tag.EnemyBullet || enemyBullet == TagAssigner.Tag.Enemy)
+            if (enemyBullet != null && enemyBullet == TagAssigner.Tag.EnemyBullet)
             {
                 _playerLive--;
+                Handheld.Vibrate();
 
             }
             else if (enemyBullet != null && enemyBullet == TagAssigner.Tag.Enemy)
             {
                 _playerLive = 0;
+                Handheld.Vibrate();
             }
 
             if (_playerLive <= 0)
